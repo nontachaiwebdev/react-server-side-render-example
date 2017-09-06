@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nontachaiwebdev/react-server-side-render-example/issues"
   },
-  "homepage": "https://github.com/nontachaiwebdev/react-server-side-render-example#readme"
+  "homepage": "https://github.com/nontachaiwebdev/react-server-side-render-example#readme",
+  "devDependencies": {
+    "webpack": "^3.5.5"
+  }
 }
