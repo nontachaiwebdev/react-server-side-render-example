@@ -6,9 +6,9 @@ import AthletePage from './components/AthletePage';
 import NotFoundPage from './components/NotFoundPage';
 
 const routes = (
-  <Route>
+  <Route path="/">
     <IndexRoute component={IndexPage}/>
-    <Route path="athlete/:id" component={AthletePage}/>
+    <Route path="athlete" component={AthletePage}/>
     <Route path="*" component={NotFoundPage}/>
   </Route>
 );
