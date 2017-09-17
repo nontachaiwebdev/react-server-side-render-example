@@ -1,24 +1,32 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-export default class IndexPage extends React.Component {
-  
-  constructor (props) {
-    super(props)
-    this.state = {
-      text: 'Before Render Text'
-    }
-  }
-
-  componentDidMount () {
-    this.setState({
-      text: 'After Render Text'
-    })  
-  }
+class IndexPage extends React.Component {
 
   render() {
-    const {text} = this.state 
+    const {text} = this.props 
     return (
-      <div>{this.state.text}</div>
+      <div>{text}</div>
     )
   }
 }
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    text: state.main.text
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+
+  }
+}
+
+const hocComponent = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(IndexPage)
+
+export default hocComponent
+

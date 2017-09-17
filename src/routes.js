@@ -8,13 +8,16 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import Store from './Store'
 
 export default props => (
-  <Router>
-    <div>
-      <Route exact path='/' component={IndexPage} />
-      <Route path='/athlete' component={AthletePage} />
-      <Route path='/notfound' component={NotFoundPage} />
-    </div>
-  </Router>
+  <Store>
+    <Router>
+      <div>
+        <Route exact path='/' component={IndexPage} />
+        <Route path='/athlete' component={AthletePage} />
+        <Route path='/notfound' component={NotFoundPage} />
+      </div>
+    </Router>
+  </Store>
 );
